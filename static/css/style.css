@@ -30,7 +30,9 @@ header {
   /* The image used is done inline*/
 
   /* Other Parameters */
-  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
