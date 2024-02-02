@@ -1,385 +1,289 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="static/css/style.css">
-    </head>
-    <body style="position:relative">
+{% include "header.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body style="position:relative">
 
-        <!-- Header Section -->
-        <div id="header-box" class="header">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                    <span class="fs-4 site-title">Beat Lab</span>
-                </a>
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#about-link" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#publications-link" class="nav-link">Publications</a></li>
-                    <li class="nav-item"><a href="#teaching-link" class="nav-link">Teaching</a></li>
-                    <li class="nav-item"><a href="#team-link" class="nav-link">Team</a></li>
-                    <li class="nav-item"><a href="#contact-link" class="nav-link">Contact</a></li>
-                </ul>
-            </header>
+    <!-- About Parallax Section -->
+    <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
+    <section id="title">
+        <div class="parallax" style="background-image: url('../static/assets/img/About.png')">
+            {% for i in range(6) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Beat Lab</span></h1>
+            <br>
+            <p><span style="margin:10px 60px;background-color:white">Catchphrase</span></p>
+            {% for i in range(10) %}
+                <br>
+            {% endfor %}
         </div>
+    </section>
 
-        <!-- Body Content Section -->
-        <!-- About Parallax Section -->
-        <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
-        <section id="title">
-            <div class="parallax" style="background-image: url('../static/assets/img/About.png')">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Beat Lab</span></h1>
-                <br>
-                <p><span style="margin:10px 60px;background-color:white">Catchphrase</span></p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about">
+        <a id="about-link"></a>
+        <div class="container px-4 py-5" id="featured-3">
+            <h4 style="margin: 20px 0px">About</h4>
+            <p>
+                We are interested in developing tools that can help us appreciate the beauty of
+                intelligent biological systems. “beat” is the intersection of our two areas of
+                research – brain waves and video games. We are at the Claremont Colleges, a
+                consortium of undergraduate liberal arts colleges, where we seek to bridge ideas
+                from neuroscience with those from other disciplines, such as psychology, philosophy,
+                dance, and media studies. We believe that such dialogue can help improve our quality
+                of life both individually and collectively.
+            </p>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <a id="about-link"></a>
-            <div class="container px-4 py-5">
-                <h4 style="margin: 20px 0px">About</h4>
-                <p>
-                    We are interested in developing tools that can help us appreciate the beauty of
-                    intelligent biological systems. “beat” is the intersection of our two areas of
-                    research – brain waves and video games. We are at the Claremont Colleges, a
-                    consortium of undergraduate liberal arts colleges, where we seek to bridge ideas
-                    from neuroscience with those from other disciplines, such as psychology, philosophy,
-                    dance, and media studies. We believe that such dialogue can help improve our quality
-                    of life both individually and collectively.
-                </p>
-            </div>
-        </section>
+    <!-- Brain Waves Parallax Section -->
+    <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
+    <section id="brain-waves-parallax">
+        <div class="parallax" style="background-image: url('../static/assets/img/brain_waves.jpg');">
+            {% for i in range(4) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Brain Waves</span></h1>
+            {% for i in range(8) %}
+                <br>
+            {% endfor %}
+        </div>
+    </section>
 
-        <!-- Brain Waves Parallax Section -->
-        <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
-        <section id="brain-waves-parallax">
-            <div class="parallax" style="background-image: url('../static/assets/img/brain_waves.jpg');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Brain Waves</span></h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- Brain Waves Section -->
+    <section id="brain-waves">
+        <a id="brain-waves-link"></a>
+        <div class="container px-4 py-5">
+            <h4 style="margin: 20px 0px">Brain Waves</h4>
+            <p>
+                We analyze brain waves recorded by hundreds of electrodes. While these waves
+                were thought to be a blurry reflection of the underlying neuronal population,
+                we find conditions in which these waves carry surprisingly precise information
+                about ongoing behavior.
+            </p>
+        </div>
+    </section>
 
-        <!-- Brain Waves Section -->
-        <section id="brain-waves">
-            <a id="brain-waves-link"></a>
-            <div class="container px-4 py-5">
-                <h4 style="margin: 20px 0px">Brain Waves</h4>
-                <p>
-                    We analyze brain waves recorded by hundreds of electrodes. While these waves
-                    were thought to be a blurry reflection of the underlying neuronal population,
-                    we find conditions in which these waves carry surprisingly precise information
-                    about ongoing behavior.
-                </p>
-            </div>
-        </section>
+    <!-- Video Games Parallax Section -->
+    <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
+    <section id="video-games-parallax">
+        <div class="parallax" style="background-image: url('../static/assets/img/video_games.png');">
+            {% for i in range(4) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Video Games</span></h1>
+            {% for i in range(8) %}
+                <br>
+            {% endfor %}
+        </div>
+    </section>
 
-        <!-- Video Games Parallax Section -->
-        <!--  TODO: Try not to depend on breaks (Though margin-top doesn't seem to work too well)  -->
-        <section id="video-games-parallax">
-            <div class="parallax" style="background-image: url('../static/assets/img/video_games.png');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Video Games</span></h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- Brain Waves Section -->
+    <section id="video-gaemes">
+        <a id="video-games-link"></a>
+        <div class="container px-4 py-5">
+            <h4 style="margin: 20px 0px">Video Games</h4>
+            <p>
+                We developed a <a href="https://hexxed.io">game</a>
+                to study how people discover solutions to hard problems. We find that
+                humans display leaps of insight that distinguish them from current AI.
+            </p>
+        </div>
+    </section>
 
-        <!-- Brain Waves Section -->
-        <section id="video-gaemes">
-            <a id="video-games-link"></a>
-            <div class="container px-4 py-5">
-                <h4 style="margin: 20px 0px">Video Games</h4>
-                <p>
-                    We developed a <a href="https://hexxed.io">game</a>
-                    to study how people discover solutions to hard problems. We find that
-                    humans display leaps of insight that distinguish them from current AI.
-                </p>
-            </div>
-        </section>
+    <!-- Publications Parallax -->
+    <section id="publications-parallax">
+        <a id="publications-link"></a>
+        <div class="parallax" style="background-image: url('../static/assets/img/books.jpg');">
+            {% for i in range(5) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Publications</span></h1>
+            {% for i in range(3) %}
+                <br>
+            {% endfor %}
+        </div>
+    </section>
 
-        <!-- Publications Parallax -->
-        <section id="publications-parallax">
-            <a id="publications-link"></a>
-            <div class="parallax" style="background-image: url('../static/assets/img/books.jpg');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Publications</span></h1>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container px-4 py-5">
+            <h4 style="margin: 20px 0px">Preprints: </h4>
+            <p>
+                Agarwal G, Lustig B, Akera S, Pastalkova E, Lee A, Sommer F. News without the buzz:
+                recovering information from weak theta rhythms of the hippocampus. bioRxiv Dec 2023.
+                <a href="url">< preprint link ></a>
+                <a href="url">< code link ></a>
+            </p>
+            <br>
+            <h4 style="margin: 20px 0px">Journal Articles: </h4>
+            <p>
+                Poo C, Agarwal G, Bonacchi N, Mainen Z. Spatial maps in piriform cortex during
+                olfactory navigation. Nature. 2021 Dec 22.
+                <a href="url">< link ></a>
+            </p>
+            <p>
+                Agarwal G, Stevenson IH, Berényi A, Mizuseki K, Buzsáki G, Sommer FT. Spatially
+                distributed local fields in the hippocampus encode rat position. Science. 2014 May 9.
+                <a href="url">< link ></a>
+            </p>
+            <p>
+                Warp E, Agarwal G, Wyart C, Friedmann D, Oldfield CS, Conner A, Del Bene F, Arrenberg AB,
+                Baier H, Isacoff EY.
+                Emergence of patterned activity in the developing zebrafish spinal cord. Curr Biol. 2012 Jan 24.
+                <a href="url">< link ></a>
+            </p>
+            <p>
+                Agarwal G and Isacoff EY.  Specializations of a Pheromonal Glomerulus in the Drosophila Olfactory
+                System.  J Neurophysiol. 2011 Feb 2.
+                <a href="url">< link ></a>
+            </p>
+            <p>
+                Pathak MM, Yarov-Yarovoy V, Agarwal G, Roux B, Barth P, Kohout S, Tombola F, Isacoff EY.
+                Closing in on the resting state of the Shaker K(+) channel.  Neuron. 2007 Oct 4.
+                <a href="url">< link ></a>
+            </p>
+            <p>
+                Guerrero G, Reiff DF, Agarwal G, Ball RW, Borst A, Goodman CS, Isacoff EY. Heterogeneity in
+                synaptic transmission along a Drosophila larval motor axon. Nature Neuroscience. 2005 Sep.
+                <a href="url">< link ></a>
+            </p>
+            <br>
+            <h4 style="margin: 20px 0px">Book Chapters: </h4>
+            <p>
+                Agarwal G. Local fields of the hippocampus: more than meets the eye. In Dualism, Platonism and
+                Voluntarism. Explorations at the Quantum, Microscopic, Mesoscopic and Symbolic Neural Levels.
+                Seán Ó Nualláin, editor. Newcastle upon Tyne, UK: Cambridge Scholars Publishing; 2016.
+            </p>
+            <p>
+                Agarwal G, Sommer FT. Measuring information in spike trains about intrinsic brain signals.
+                Chapter 6 of Spike Timing: Mechanism and Function. Victor JD, Dilorenzo PM, editors.
+                Boca Raton, FL: CRC Press; 2013.
+            </p>
+            <br>
+            <h4 style="margin: 20px 0px">Selected Talks: </h4>
+            <p>
+                Jain R, Quendera T, Deng D, Hamidi M, Bergomi M, Mainen Z, Agarwal G. You got hexxed: persistence
+                during complex skill learning. Fourth international symposium on the mathematics of Neuroscience.
+            </p>
+            <p>
+                Quendera T, Deng D, Hamidi M, Bergomi M, Mainen Z, Agarwal G. Humans learning a complex task are
+                picky and sticky. Computational Cognitive Neuroscience Meeting, August 2022.
+            </p>
+            <p>
+                Agarwal G. Strong vs Wise: two distinct theta rhythms in the hippocampus.
+                Towards a Science of Consciousness, Tucson, AZ April 2022.
+                <a href="url">< youtube link ></a>
+            </p>
+        </div>
+    </section>
 
-        <!-- Publications Section -->
-        <section id="publications">
-            <div class="container px-4 py-5">
-                <h4 style="margin: 20px 0px">Preprints: </h4>
-                <p>
-                    Agarwal G, Lustig B, Akera S, Pastalkova E, Lee A, Sommer F. News without the buzz:
-                    recovering information from weak theta rhythms of the hippocampus. bioRxiv Dec 2023.
-                    <a href="url">< preprint link ></a>
-                    <a href="url">< code link ></a>
-                </p>
+    <!-- Teaching Parallax -->
+    <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
+    <section id="positions-parallax">
+        <a id="teaching-link"></a>
+        <div class="parallax" style="background-image: url('../static/assets/img/teaching.jpg');">
+            {% for i in range(4) %}
                 <br>
-                <h4 style="margin: 20px 0px">Journal Articles: </h4>
-                <p>
-                    Poo C, Agarwal G, Bonacchi N, Mainen Z. Spatial maps in piriform cortex during
-                    olfactory navigation. Nature. 2021 Dec 22.
-                    <a href="url">< link ></a>
-                </p>
-                <p>
-                    Agarwal G, Stevenson IH, Berényi A, Mizuseki K, Buzsáki G, Sommer FT. Spatially
-                    distributed local fields in the hippocampus encode rat position. Science. 2014 May 9.
-                    <a href="url">< link ></a>
-                </p>
-                <p>
-                    Warp E, Agarwal G, Wyart C, Friedmann D, Oldfield CS, Conner A, Del Bene F, Arrenberg AB,
-                    Baier H, Isacoff EY.
-                    Emergence of patterned activity in the developing zebrafish spinal cord. Curr Biol. 2012 Jan 24.
-                    <a href="url">< link ></a>
-                </p>
-                <p>
-                    Agarwal G and Isacoff EY.  Specializations of a Pheromonal Glomerulus in the Drosophila Olfactory
-                    System.  J Neurophysiol. 2011 Feb 2.
-                    <a href="url">< link ></a>
-                </p>
-                <p>
-                    Pathak MM, Yarov-Yarovoy V, Agarwal G, Roux B, Barth P, Kohout S, Tombola F, Isacoff EY.
-                    Closing in on the resting state of the Shaker K(+) channel.  Neuron. 2007 Oct 4.
-                    <a href="url">< link ></a>
-                </p>
-                <p>
-                    Guerrero G, Reiff DF, Agarwal G, Ball RW, Borst A, Goodman CS, Isacoff EY. Heterogeneity in
-                    synaptic transmission along a Drosophila larval motor axon. Nature Neuroscience. 2005 Sep.
-                    <a href="url">< link ></a>
-                </p>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Teaching</span></h1>
+            {% for i in range(3) %}
                 <br>
-                <h4 style="margin: 20px 0px">Book Chapters: </h4>
-                <p>
-                    Agarwal G. Local fields of the hippocampus: more than meets the eye. In Dualism, Platonism and
-                    Voluntarism. Explorations at the Quantum, Microscopic, Mesoscopic and Symbolic Neural Levels.
-                    Seán Ó Nualláin, editor. Newcastle upon Tyne, UK: Cambridge Scholars Publishing; 2016.
-                </p>
-                <p>
-                    Agarwal G, Sommer FT. Measuring information in spike trains about intrinsic brain signals.
-                    Chapter 6 of Spike Timing: Mechanism and Function. Victor JD, Dilorenzo PM, editors.
-                    Boca Raton, FL: CRC Press; 2013.
-                </p>
-                <br>
-                <h4 style="margin: 20px 0px">Selected Talks: </h4>
-                <p>
-                    Jain R, Quendera T, Deng D, Hamidi M, Bergomi M, Mainen Z, Agarwal G. You got hexxed: persistence
-                    during complex skill learning. Fourth international symposium on the mathematics of Neuroscience.
-                </p>
-                <p>
-                    Quendera T, Deng D, Hamidi M, Bergomi M, Mainen Z, Agarwal G. Humans learning a complex task are
-                    picky and sticky. Computational Cognitive Neuroscience Meeting, August 2022.
-                </p>
-                <p>
-                    Agarwal G. Strong vs Wise: two distinct theta rhythms in the hippocampus.
-                    Towards a Science of Consciousness, Tucson, AZ April 2022.
-                    <a href="url">< youtube link ></a>
-                </p>
-            </div>
-        </section>
+            {% endfor %}
+        </div>
+    </section>
 
-        <!-- Teaching Parallax -->
-        <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
-        <section id="positions-parallax">
-            <a id="teaching-link"></a>
-            <div class="parallax" style="background-image: url('../static/assets/img/teaching.jpg');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Teaching</span></h1>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- Positions Section -->
+    <section id="positions">
+        <div class="container px-4 py-5">
+            <h4 style="margin: 20px 0px">Available Courses</h4>
+            <p>Introduction to Computational Neuroscience (Fall '21 - present) <a href="url">< syllabus pdf ></a></p>
+            <p>Foundations of Neuroscience (Spring '22 - present) <a href="url">< syllabus pdf ></a></p>
+            <p>Minds, Brains, and Programs (Spring '24; co-taught with Brain Keeley and Lucas Bang) <a href="url">< syllabus pdf ></a></p>
+        </div>
+    </section>
 
-        <!-- Positions Section -->
-        <section id="positions">
-            <div class="container px-4 py-5">
-                <h4 style="margin: 20px 0px">Available Courses</h4>
-                <p>Introduction to Computational Neuroscience (Fall '21 - present) <a href="url">< syllabus pdf ></a></p>
-                <p>Foundations of Neuroscience (Spring '22 - present) <a href="url">< syllabus pdf ></a></p>
-                <p>Minds, Brains, and Programs (Spring '24; co-taught with Brain Keeley and Lucas Bang) <a href="url">< syllabus pdf ></a></p>
-            </div>
-        </section>
+    <!-- Team Parallax -->
+    <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
+    <section id="team-parallax">
+        <a id="team-link"></a>
+        <div class="parallax" style="background-image: url('../static/assets/img/team.jpg');">
+            {% for i in range(6) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Team</span></h1>
+            {% for i in range(5) %}
+                <br>
+            {% endfor %}
+        </div>
+    </section>
 
-        <!-- Team Parallax -->
-        <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
-        <section id="team-parallax">
-            <a id="team-link"></a>
-            <div class="parallax" style="background-image: url('../static/assets/img/team.jpg');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Team</span></h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
+    <!-- Team Section -->
+    <!--  TODO: Get this to cycle through a .csv file, or a database file instead of ranges  -->
+    <section id="team">
+        <div class="container px-4 py-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
 
-        <!-- Team Section -->
-        <!--  TODO: Get this to cycle through a .csv file, or a database file instead of ranges  -->
-        <section id="team">
-            <div class="container px-4 py-5">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-                    <div class="col mb-3">
+                </div>
+                <div class="col mb-3">
+                    <h4 style="margin: 20px 0px">Current Members</h4>
+                    <p>
+                        Gautam Agarwal <br>
+                        CJ <br>
+                        Fiona <br>
+                        Aalia <br>
+                        Others <br>
+                    </p>
+                </div>
+                <div class="col mb-3">
 
-                    </div>
-                    <div class="col mb-3">
-                        <h4 style="margin: 20px 0px">Current Members</h4>
-                        <p>
-                            Gautam Agarwal <br>
-                            CJ <br>
-                            Fiona <br>
-                            Aalia <br>
-                            Others <br>
-                        </p>
-                    </div>
-                    <div class="col mb-3">
+                </div>
+                <div class="col mb-3">
+                    <h4 style="margin: 20px 0px">Alumni</h4>
+                    <p>
+                        Chae Park <br>
+                        Geeyoun Jung <br>
+                        Seiji Akera <br>
+                    </p>
+                </div>
+                <div class="col mb-3">
 
-                    </div>
-                    <div class="col mb-3">
-                        <h4 style="margin: 20px 0px">Alumni</h4>
-                        <p>
-                            Chae Park <br>
-                            Geeyoun Jung <br>
-                            Seiji Akera <br>
-                        </p>
-                    </div>
-                    <div class="col mb-3">
-
-                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Contact Parallax -->
-        <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
-        <section id="contact-parallax">
-            <a id="contact-link"></a>
-            <div class="parallax" style="background-image: url('../static/assets/img/contact.png');">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Contact Us</span></h1>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container px-4 py-5">
-                <p>
-                    Feel free to reach out if you want to learn more! You can reach Dr. Agarwal at
-                    <img src="../static/assets/img/agarwal_email.png" height="22">
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Footer-->
-        <div id="footer-box">
-            <div class="container px-4 py-5" id="featured-3">
-                <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5">
-                    <div class="col mb-3">
-                        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                        </a>
-                        <p>© 2023</p>
-                    </div>
-
-                    <div class="col mb-3">
-                        <h5>Lab/Office Address</h5>
-                        <br>
-                        <p>
-                            Room 105 <br>
-                            Keck Science Center <br>
-                            925 N Mills Ave <br>
-                            Claremont, CA 91711 <br>
-                        </p>
-                    </div>
-
-                    <div class="col mb-3">
-
-                    </div>
-
-                    <div class="col mb-3">
-                        <h5>Delivery Address</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0">About</a></li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    </body>
-</html>
+    </section>
+
+    <!-- Contact Parallax -->
+    <!--  TODO: Once I get the parallax stuff fully working as intended, I can paste it down here  -->
+    <section id="contact-parallax">
+        <a id="contact-link"></a>
+        <div class="parallax" style="background-image: url('../static/assets/img/contact.png');">
+            {% for i in range(4) %}
+                <br>
+            {% endfor %}
+            <h1><span style="margin:10px 60px;background-color:white">Contact Us</span></h1>
+            {% for i in range(3) %}
+                <br>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container px-4 py-5">
+            <p>
+                Feel free to reach out if you want to learn more! You can reach Dr. Agarwal at
+                <img src="../static/assets/img/agarwal_email.png" height="22">
+            </p>
+        </div>
+
+    </section>
+{% include "footer.html" %}
