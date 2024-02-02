@@ -43,5 +43,9 @@ header {
     font-family: futura-pt;
     text-transform: uppercase;
     letter-spacing: 10px;
-    color:grey
+    color:grey;
+}
+
+.nav-color {
+    color: black;
 }
