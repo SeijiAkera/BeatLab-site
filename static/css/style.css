@@ -4,7 +4,6 @@ body, html {
 
 header {
     top: 20px;
-    z-index: 2;
     background-color: rgba(255,255,255,0.95);
 }
 
@@ -38,7 +37,7 @@ header {
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -49,6 +48,7 @@ header {
 
 .site-title {
     font-family: futura-pt;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     color:grey;
@@ -56,6 +56,10 @@ header {
 
 .nav-color {
     color: black;
+}
+
+.navbar-toggler-icon {
+    font-size: 0.875rem; /* Adjust the font-size to your desired size */
 }
 
 @media (max-width: 768px) {
