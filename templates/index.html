@@ -7,7 +7,55 @@
               rel="stylesheet"
               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
               crossorigin="anonymous">
-        <link rel="stylesheet" href="static/css/style.css">
+        <style>
+            body, html {
+              height: 100%;
+            }
+
+            header {
+                top: 20px;
+                z-index: 2;
+                background-color: rgba(255,255,255,0.95);
+            }
+
+            #header-box {
+                left: 0;
+                right: 0;
+                position: fixed;
+            }
+
+            #footer-box {
+                background-color: rgb(0,0,0);
+                color: rgb(255,255,255);
+            }
+
+            .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+            }
+
+            .parallax {
+              /* The image used is done inline*/
+
+              /* Other Parameters */
+              width: 100%;
+
+              /* Create the parallax scrolling effect */
+              background-attachment: fixed;
+              background-position: center top;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+
+            .site-title {
+                font-family: futura-pt;
+                text-transform: uppercase;
+                letter-spacing: 10px;
+                color:grey
+            }
+        </style>
     </head>
     <body style="position:relative">
 
