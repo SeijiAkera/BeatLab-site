@@ -41,11 +41,11 @@
               width: 50%;
             }
 
-            .parallax {
+            .title-parallax {
                 /* The image used is done inline*/
 
                 /* Other Parameters */
-                min-height: 70vh;
+                min-height: 100vh;
                 line-height: 30vh;
 
                 /* Create the parallax scrolling effect */
@@ -53,6 +53,20 @@
                 background-position: center top;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
+            }
+
+            .parallax {
+                /* The image used is done inline*/
+
+                /* Other Parameters */
+                min-height: 50vh;
+                line-height: 20vh;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-size: 100% 95%;
             }
 
             .site-title {
@@ -66,24 +80,35 @@
                 color: black;
             }
 
-            @media (max-width: 767px) {
+            @media (min-width: 768px) and (max-width: 1024px) {
                 .parallax {
-                    content: "";
-                    display: block;
-                    position: fixed;
-                    left: 0;
-                    top: 0;
-                    min-height: 70vh;
-                    line-height: 30vh;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -10;
-                    background-position: center top;
+                    /* The image used is done inline*/
+
+                    /* Other Parameters */
+                    min-height: 50vh;
+                    line-height: 20vh;
+
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center bottom;
                     background-repeat: no-repeat;
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size: cover;
+                    background-size: 150% 95%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .parallax {
+                    /* The image used is done inline*/
+
+                    /* Other Parameters */
+                    min-height: 50vh;
+                    line-height: 20vh;
+
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center bottom;
+                    background-repeat: no-repeat;
+                    background-size: 200% 95%;
                 }
             }
         </style>
@@ -115,7 +140,7 @@
         <!-- Body Content Section -->
         <!-- About Parallax Section -->
         <section id="title">
-            <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/About.png?raw=true')">
+            <div class="title-parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/About.png?raw=true')">
                 <br>
                 <h1><span style="margin:10px 60px;background-color:white">Beat Lab</span></h1>
                 <p><span style="margin:10px 60px;background-color:white">Catchphrase</span></p>
