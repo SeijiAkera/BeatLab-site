@@ -96,7 +96,7 @@
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (min-width: 480px) and (max-width: 768px) {
                 .parallax {
                     /* The image used is done inline*/
 
@@ -109,6 +109,52 @@
                     background-position: center bottom;
                     background-repeat: no-repeat;
                     background-size: 200% 95%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .parallax {
+                    /* The image used is done inline*/
+
+                    /* Other Parameters */
+                    min-height: 50vh;
+                    line-height: 20vh;
+
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center bottom;
+                    background-repeat: no-repeat;
+                    background-size: 200% 95%;
+                }
+            }
+
+            @media only screen and (max-device-width: 480px) and (max-width: 768px) {
+                .title-parallax {
+                    /* The image used is done inline*/
+
+                    /* Other Parameters */
+                    min-height: 100vh;
+                    line-height: 30vh;
+
+                    /* Create the parallax scrolling effect */
+                    background-attachment: scroll;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    background-size: 150% 100%;
+                }
+
+                .parallax {
+                    /* The image used is done inline*/
+
+                    /* Other Parameters */
+                    min-height: 50vh;
+                    line-height: 20vh;
+
+                    /* Create the parallax scrolling effect */
+                    background-attachment: scroll;
+                    background-position: center bottom;
+                    background-repeat: no-repeat;
+                    background-size: 300% 95%;
                 }
             }
         </style>
