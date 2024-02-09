@@ -52,7 +52,7 @@
                 background-attachment: fixed;
                 background-position: center top;
                 background-repeat: no-repeat;
-                background-size: 100% 100%;
+                background-size: 100%;
             }
 
             .parallax {
@@ -67,6 +67,11 @@
                 background-position: center bottom;
                 background-repeat: no-repeat;
                 background-size: 100% 95%;
+            }
+
+            .parallax-title {
+                margin: 10px 60px;
+                background-color: rgba(255, 255, 255, 0.3)
             }
 
             .site-title {
@@ -121,42 +126,42 @@
                     line-height: 20vh;
 
                     /* Create the parallax scrolling effect */
-                    background-attachment: fixed;
-                    background-position: center bottom;
-                    background-repeat: no-repeat;
-                    background-size: 200% 95%;
-                }
-            }
-
-            @media only screen and (max-device-width: 480px) and (max-width: 768px) {
-                .title-parallax {
-                    /* The image used is done inline*/
-
-                    /* Other Parameters */
-                    min-height: 100vh;
-                    line-height: 30vh;
-
-                    /* Create the parallax scrolling effect */
-                    background-attachment: scroll;
-                    background-position: center top;
-                    background-repeat: no-repeat;
-                    background-size: 150% 100%;
-                }
-
-                .parallax {
-                    /* The image used is done inline*/
-
-                    /* Other Parameters */
-                    min-height: 50vh;
-                    line-height: 20vh;
-
-                    /* Create the parallax scrolling effect */
                     background-attachment: scroll;
                     background-position: center bottom;
                     background-repeat: no-repeat;
                     background-size: 200% 95%;
                 }
             }
+
+<!--            @media only screen and (max-device-width: 480px) and (max-width: 768px) {-->
+<!--                .title-parallax {-->
+<!--                    /* The image used is done inline*/-->
+
+<!--                    /* Other Parameters */-->
+<!--                    min-height: 100vh;-->
+<!--                    line-height: 30vh;-->
+
+<!--                    /* Create the parallax scrolling effect */-->
+<!--                    background-attachment: scroll;-->
+<!--                    background-position: center top;-->
+<!--                    background-repeat: no-repeat;-->
+<!--                    background-size: 150% 100%;-->
+<!--                }-->
+
+<!--                .parallax {-->
+<!--                    /* The image used is done inline*/-->
+
+<!--                    /* Other Parameters */-->
+<!--                    min-height: 50vh;-->
+<!--                    line-height: 20vh;-->
+
+<!--                    /* Create the parallax scrolling effect */-->
+<!--                    background-attachment: scroll;-->
+<!--                    background-position: center bottom;-->
+<!--                    background-repeat: no-repeat;-->
+<!--                    background-size: 200% 95%;-->
+<!--                }-->
+<!--            }-->
         </style>
     </head>
     <body style="position:relative">
@@ -165,21 +170,14 @@
         <div id="header-box" class="header">
             <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
                 <a href="/" class="navbar-brand site-title">Beat Lab</a>
-                <nav class="navbar navbar-light bg-light">
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-                        <span class="navbar-toggler-icon my-toggler"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="collapsingNavbar2">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
-                            <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
-                            <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
-                            <li class="nav-item"><a href="#teaching-link" class="nav-link nav-color">Teaching</a></li>
-                            <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
-                            <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
+                    <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
+                    <li class="nav-item"><a href="#teaching-link" class="nav-link nav-color">Teaching</a></li>
+                    <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
+                    <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
+                </ul>
             </header>
         </div>
 
@@ -187,9 +185,6 @@
         <!-- About Parallax Section -->
         <section id="title">
             <div class="title-parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/About.png?raw=true')">
-                <br>
-                <h1><span style="margin:10px 60px;background-color:white">Beat Lab</span></h1>
-                <p><span style="margin:10px 60px;background-color:white">Catchphrase</span></p>
             </div>
         </section>
 
@@ -214,7 +209,7 @@
         <section id="brain-waves-parallax">
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/brain_waves.jpg?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Brain Waves</span></h1>
+                <h1><span class="parallax-title">Brain Waves</span></h1>
             </div>
         </section>
 
@@ -236,7 +231,7 @@
         <section id="video-games-parallax">
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/video_games.png?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Video Games</span></h1>
+                <h1><span class="parallax-title">Video Games</span></h1>
             </div>
         </section>
 
@@ -258,7 +253,7 @@
             <a id="publications-link"></a>
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/books.jpg?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Publications</span></h1>
+                <h1><span class="parallax-title">Publications</span></h1>
             </div>
         </section>
 
@@ -340,7 +335,7 @@
             <a id="teaching-link"></a>
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/teaching.jpg?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Teaching</span></h1>
+                <h1><span class="parallax-title">Teaching</span></h1>
             </div>
         </section>
 
@@ -359,7 +354,7 @@
             <a id="team-link"></a>
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/team.jpg?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Team</span></h1>
+                <h1><span class="parallax-title">Team</span></h1>
             </div>
         </section>
 
@@ -403,7 +398,7 @@
             <a id="contact-link"></a>
             <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/contact.png?raw=true');">
                 <br>
-                <h1><span style="margin:10px 60px;background-color:white">Contact Us</span></h1>
+                <h1><span class="parallax-title">Contact Us</span></h1>
             </div>
         </section>
 
