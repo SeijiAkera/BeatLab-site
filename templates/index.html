@@ -412,10 +412,10 @@
             var bgParallax = document.getElementsByClassName("parallax");
             window.addEventListener("scroll", function() {
                 titleParallax.style.backgroundPosition = "50% " + (-window.pageYOffset / 7 + 70) + "px"
-                const image_offset_list = [-40, -35, -30, -30, -10, -45];
+                const image_offset_list = [-400, -150, -30, -130, +100, -400];
                 for (let i = 0; i < bgParallax.length; i++) {
-                    let offset = image_offset_list[i] + -window.pageYOffset / 5
-                    bgParallax[i].style.backgroundPosition = "50% " + offset + "vh";
+                    let offset = image_offset_list[i] + -window.pageYOffset / 3
+                    bgParallax[i].style.backgroundPosition = "50% " + offset + "px";
                 }
             });
         </script>
