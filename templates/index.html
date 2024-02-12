@@ -103,7 +103,7 @@
                     /* The image used is done inline*/
 
                     /* Other Parameters */
-                    min-height: 50vh;
+<!--                    min-height: 50vh;-->
                     line-height: 20vh;
 
                     /* Create the parallax scrolling effect */
@@ -413,9 +413,14 @@
             window.addEventListener("scroll", function() {
                 titleParallax.style.backgroundPosition = "50% " + (-window.pageYOffset / 7 + 70) + "px"
                 <!--  TODO: The below numbers shift the images. Change to center the images after editing the site  -->
-                const image_offset_list = [-400, -150, -30, -130, +100, -400];
+                const image_offset_list = [-window.innerHeight/0.675,
+                                            -window.innerHeight/0.675,
+                                            -window.innerHeight/0.675,
+                                            -window.innerHeight/0.675,
+                                            -window.innerHeight/0.8,
+                                            -window.innerHeight/0.6];
                 for (let i = 0; i < bgParallax.length; i++) {
-                    let offset = image_offset_list[i] + -window.pageYOffset / 3
+                    let offset = image_offset_list[i] + -window.pageYOffset * (window.innerWidth/(1.5*window.innerHeight))
                     bgParallax[i].style.backgroundPosition = "50% " + offset + "px";
                 }
             });
