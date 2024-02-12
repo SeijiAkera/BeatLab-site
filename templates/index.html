@@ -66,7 +66,7 @@
                 background-attachment: fixed;
                 background-position: center top;
                 background-repeat: repeat;
-                background-size: 100% 150%;
+                background-size: 100% 100%;
             }
 
             .parallax-title {
@@ -83,10 +83,6 @@
 
             .nav-color {
                 color: black;
-            }
-
-            .content {
-                min-height: 100vh
             }
 
             @media (max-width: 480px) {
@@ -114,7 +110,7 @@
                     background-attachment: scroll;
                     background-position: center top;
                     background-repeat: repeat;
-                    background-size: 100% 150%;
+                    background-size: 100% 100%;
                 }
             }
         </style>
@@ -146,7 +142,7 @@
         <!-- About Section -->
         <section id="about">
             <a id="about-link"></a>
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <h4 style="margin: 20px 0px">About</h4>
                 <p>
                     We are interested in developing tools that can help us appreciate the beauty of
@@ -171,7 +167,7 @@
         <!-- Brain Waves Section -->
         <section id="brain-waves">
             <a id="brain-waves-link"></a>
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <h4 style="margin: 20px 0px">Brain Waves</h4>
                 <p>
                     We analyze brain waves recorded by hundreds of electrodes. While these waves
@@ -193,7 +189,7 @@
         <!-- Brain Waves Section -->
         <section id="video-gaemes">
             <a id="video-games-link"></a>
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <h4 style="margin: 20px 0px">Video Games</h4>
                 <p>
                     We developed a <a href="https://hexxed.io">game</a>
@@ -206,7 +202,7 @@
         <!-- Publications Parallax -->
         <section id="publications-parallax">
             <a id="publications-link"></a>
-            <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/books.jpg?raw=true');">
+            <div class="parallax" style="background-image: url('https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/books.jpg?raw=true'); ">
                 <br>
                 <h1><span class="parallax-title">Publications</span></h1>
             </div>
@@ -214,7 +210,7 @@
 
         <!-- Publications Section -->
         <section id="publications">
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <h4 style="margin: 20px 0px">Preprints: </h4>
                 <p>
                     Agarwal G, Lustig B, Akera S, Pastalkova E, Lee A, Sommer F. News without the buzz:
@@ -296,7 +292,7 @@
 
         <!-- Teaching Section -->
         <section id="teaching">
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <h4 style="margin: 20px 0px">Available Courses</h4>
                 <p>Introduction to Computational Neuroscience (Fall '21 - present) <a href="url">< syllabus pdf ></a></p>
                 <p>Foundations of Neuroscience (Spring '22 - present) <a href="url">< syllabus pdf ></a></p>
@@ -315,7 +311,7 @@
 
         <!-- Team Section -->
         <section id="team">
-            <div class="container content px-4 py-5">
+            <div class="container px-4 py-5">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                     <div class="col mb-3">
 
@@ -416,8 +412,9 @@
             var bgParallax = document.getElementsByClassName("parallax");
             window.addEventListener("scroll", function() {
                 titleParallax.style.backgroundPosition = "50% " + (-window.pageYOffset / 7 + 70) + "px"
+                const image_offset_list = [-40, -35, -30, -30, -10, -45];
                 for (let i = 0; i < bgParallax.length; i++) {
-                    let offset = 70 + -window.pageYOffset / 5
+                    let offset = image_offset_list[i] + -window.pageYOffset / 5
                     bgParallax[i].style.backgroundPosition = "50% " + offset + "vh";
                 }
             });
