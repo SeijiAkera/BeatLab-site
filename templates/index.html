@@ -412,6 +412,7 @@
             var bgParallax = document.getElementsByClassName("parallax");
             window.addEventListener("scroll", function() {
                 titleParallax.style.backgroundPosition = "50% " + (-window.pageYOffset / 7 + 70) + "px"
+                <!--  TODO: The below numbers shift the images. Change to center the images after editing the site  -->
                 const image_offset_list = [-400, -150, -30, -130, +100, -400];
                 for (let i = 0; i < bgParallax.length; i++) {
                     let offset = image_offset_list[i] + -window.pageYOffset / 3
