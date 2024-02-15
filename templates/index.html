@@ -34,11 +34,24 @@
                 color: rgb(255,255,255);
             }
 
+            .attribution {
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                width: 200px;
+                text-align: right;
+                font-size: 10px
+            }
+
             .center {
               display: block;
               margin-left: auto;
               margin-right: auto;
               width: 50%;
+            }
+
+            .content {
+                position: relative;
             }
 
             .title-parallax {
@@ -150,14 +163,21 @@
         <div id="header-box" class="header">
             <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
                 <a href="/" class="navbar-brand site-title">Beat Lab</a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
-                    <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
-                    <li class="nav-item"><a href="#teaching-link" class="nav-link nav-color">Teaching</a></li>
-                    <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
-                    <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
-                </ul>
+            <nav class="navbar navbar-light bg-light">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                    <span class="navbar-toggler-icon my-toggler"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="collapsingNavbar2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
+                        <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
+                        <li class="nav-item"><a href="#teaching-link" class="nav-link nav-color">Teaching</a></li>
+                        <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
+                        <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
             </header>
         </div>
 
@@ -171,7 +191,8 @@
         <!-- About Section -->
         <section id="about">
             <a id="about-link"></a>
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
+                <div class="attribution">Image by: Marta Correia</div>
                 <h4 style="margin: 20px 0px">About</h4>
                 <p>
                     We are interested in developing tools that can help us appreciate the beauty of
@@ -194,7 +215,8 @@
 
         <!-- Brain Waves Section -->
         <section id="brain-waves">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
+                <div class="attribution">Image by: Nick Lally</div>
                 <h4 style="margin: 20px 0px">Brain Waves</h4>
                 <p>
                     We analyze brain waves recorded by hundreds of electrodes. While these waves
@@ -214,7 +236,7 @@
 
         <!-- Brain Waves Section -->
         <section id="video-gaemes">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
                 <h4 style="margin: 20px 0px">Video Games</h4>
                 <p>
                     We developed a <a href="https://hexxed.io">game</a>
@@ -234,7 +256,7 @@
 
         <!-- Publications Section -->
         <section id="publications">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
                 <h4 style="margin: 20px 0px">Preprints: </h4>
                 <p>
                     Agarwal G, Lustig B, Akera S, Pastalkova E, Lee A, Sommer F. News without the buzz:
@@ -314,7 +336,8 @@
 
         <!-- Positions Section -->
         <section id="positions">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
+                <div class="attribution">Image by: Shreya Kamra</div>
                 <h4 style="margin: 20px 0px">Available Courses</h4>
                 <p>Introduction to Computational Neuroscience (Fall '21 - present) <a href="url">< syllabus pdf ></a></p>
                 <p>Foundations of Neuroscience (Spring '22 - present) <a href="url">< syllabus pdf ></a></p>
@@ -332,7 +355,7 @@
 
         <!-- Team Section -->
         <section id="team">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                     <div class="col mb-3">
 
@@ -374,7 +397,8 @@
 
         <!-- Contact Section -->
         <section id="contact">
-            <div class="container px-4 py-5">
+            <div class="container content px-4 py-5">
+                <div class="attribution">Image by: Dall-E</div>
                 <p>
                     Feel free to reach out if you want to learn more! You can reach Dr. Agarwal at
                     <img src="https://github.com/SeijiAkera/BeatLab-test-site/blob/main/static/assets/img/agarwal_email.png?raw=true" height="22">
