@@ -98,6 +98,18 @@
                 color: black;
             }
 
+            @media screen and (min-width: 800px){
+                .hide-on-desktop {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 800px){
+                .hide-on-mobile {
+                    display: none;
+                }
+            }
+
             @media screen and (max-width: 480px) {
                 .title-parallax {
                     /* The image used is done inline*/
@@ -163,12 +175,21 @@
         <div id="header-box" class="header">
             <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
                 <a href="/" class="navbar-brand site-title">Beat Lab</a>
-            <nav class="navbar navbar-light bg-light">
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-                    <span class="navbar-toggler-icon my-toggler"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="collapsingNavbar2">
-                    <ul class="nav nav-pills">
+                <nav class="navbar navbar-light">
+                    <button class="navbar-toggler ml-auto hide-on-desktop" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                        <span class="navbar-toggler-icon my-toggler"></span>
+                    </button>
+                    <div class="navbar-collapse collapse hide-on-desktop" id="collapsingNavbar2">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
+                            <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
+                            <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
+                            <li class="nav-item"><a href="#teaching-link" class="nav-link nav-color">Teaching</a></li>
+                            <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
+                            <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
+                        </ul>
+                    </div>
+                    <ul class="nav nav-pills hide-on-mobile">
                         <li class="nav-item"><a href="#" class="nav-link nav-color" aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="#about-link" class="nav-link nav-color">About</a></li>
                         <li class="nav-item"><a href="#publications-link" class="nav-link nav-color">Publications</a></li>
@@ -176,8 +197,7 @@
                         <li class="nav-item"><a href="#team-link" class="nav-link nav-color">Team</a></li>
                         <li class="nav-item"><a href="#contact-link" class="nav-link nav-color">Contact</a></li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
             </header>
         </div>
 
