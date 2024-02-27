@@ -463,9 +463,11 @@
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
         <script type="text/javascript">
             var navButtons = document.getElementsByClassName("nav-item");
-            navButtons.addEventListener("click", function() {
-                document.getElementById("nav-button").click();
-            });
+            for (var i=0; i < navButtons.length; i++) {
+                navButtons[i].addEventListener("click", function() {
+                    document.getElementById("nav-button").click();
+                });
+            }
         </script>
     </body>
 </html>
